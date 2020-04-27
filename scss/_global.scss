@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $font-body;
+  background: $intro-bg;
+  color: $white;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+a {
+  color: $white;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  overflow: hidden;
+}
+
+.btn {
+  display: inline-block;
+  background: linear-gradient(to right, $blue, 100%, $cyan);
+  padding: 1.5rem 7.5rem;
+  border-radius: 5rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+
+  &:hover {
+    box-shadow: 5px 10px 8px #888888;
+    transform: translateY(-0.5rem);
+  }
+}
