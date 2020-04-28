@@ -30,12 +30,24 @@ ul {
   list-style: none;
 }
 
+img {
+  max-width: 100%;
+}
+
 .container {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 2rem;
+  // padding: 0 2rem;
   overflow: hidden;
 }
+
+h1, h2 {
+  font-family: $font-title;
+}
+
+// section {
+//   padding: 7.3rem 6rem 8.7rem 6rem;
+// }
 
 .btn {
   display: inline-block;
@@ -46,7 +58,6 @@ ul {
   transition: all 0.2s ease-in;
 
   &:hover {
-    box-shadow: 5px 10px 8px #888888;
     transform: translateY(-0.5rem);
   }
 }

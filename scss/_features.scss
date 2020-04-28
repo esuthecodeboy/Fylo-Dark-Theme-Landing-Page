@@ -1,1 +1,36 @@
+.features {
+  background: $main-bg;
+}
 
+.features__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  justify-content: center;
+  align-items: center;
+  gap: 10rem 13rem;
+  max-width: 920px;
+  padding: 16rem 0;
+
+  &--items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    // border: 1px solid red;
+
+    img {
+      padding-bottom: 3rem;
+    }
+
+    h4 {
+      font-family: $font-title;
+      font-size: 2.5rem;
+      padding-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+    }
+  }
+}

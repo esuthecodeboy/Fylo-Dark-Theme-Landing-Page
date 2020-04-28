@@ -1,0 +1,49 @@
+.productivity {
+  background: $main-bg;
+  padding: 7.3rem 6rem 8.7rem 6rem;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
+    justify-items: center;
+    align-items: center;
+    gap: 6rem;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-self: start;
+    align-items: start;
+    max-width: 70%;
+
+    img {
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 4.6rem;
+      max-width: 40rem;
+    }
+
+    p {
+      padding: 2rem 0;
+    }
+
+    .cta {
+      color: $cyan;
+      padding-bottom: 0.3rem;
+      border-bottom: 1px solid $cyan;
+      background-image: url("/images/icon-arrow.svg");
+      background-repeat: no-repeat;
+      background-position: right center;
+      padding-right: 2.5rem;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        color: $white;
+        border-bottom: 1px solid $white;
+        transform: translateY(-0.5rem);
+      }
+    }
+  }
+}
