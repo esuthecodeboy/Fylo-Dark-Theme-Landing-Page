@@ -4,15 +4,24 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin: 7rem 8rem;
+  // 7.9rem left, 7.2rem top, 7.2rem bottom
+  padding: 7.2rem 8rem;
   img {
-    width: 18.5rem;
+    width: 8.5rem;
+
+    @include breakpoint(medium) {
+      // width
+    }
+
+    @include breakpoint(large) {
+      width: 18.5rem;
+    }
   }
 
   .menu {
     display: flex;
     li a {
-    padding: 0 5rem;
+      padding: 0 5rem;
     }
   }
 }

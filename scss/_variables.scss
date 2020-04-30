@@ -1,12 +1,12 @@
 // FONTS
-$font-title: 'Raleway', sans-serif;
-$font-body: 'Open Sans', sans-serif;
+$font-title: "Raleway", sans-serif;
+$font-body: "Open Sans", sans-serif;
 
 // COLOURS
 
-// Primary 
+// Primary
 $intro-bg: #1c2431;
-$main-bg: #181F2C;
+$main-bg: #181f2c;
 $footer-bg: #0b1523;
 $testimonials-bg: #202a3c;
 
@@ -16,3 +16,23 @@ $blue: #339ecc;
 
 // Neutral
 $white: #ffffff;
+
+// Breakpoints
+$breakpoints: (
+  // Phones
+    small: 499px,
+  // Tablet
+    medium: 899px,
+  // Desktop
+    large: 999px,
+  // Large Desktop
+    xlarge: 1399px
+);
+
+@mixin breakpoint($size) {
+  $breakpoint-value: map-get($breakpoints, $size);
+
+  @media screen and (min-width: $breakpoint-value) {
+    @content;
+  }
+}
