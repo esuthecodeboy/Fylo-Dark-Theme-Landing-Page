@@ -1,9 +1,91 @@
 .footer {
   background: $footer-bg;
   .container {
+    max-width: 124rem;
     padding-top: 20rem;
-    padding-left: 12rem;
+  }
+
+  &__grid {
+    display: grid;
+    align-self: center;
     padding-bottom: 9.4rem;
-    padding-right: 8.1rem;
+    gap: 35px;
+    grid-template-columns: 3fr 2fr 2fr 2fr auto;
+    grid-template-rows: 60px 1fr;
+    grid-template-areas: "logo logo logo logo logo" "address contact terms conditions social";
+  }
+
+  &__logo {
+    grid-area: logo;
+  }
+
+  &__address {
+    grid-area: address;
+    display: flex;
+
+    svg {
+      flex: 0 0 13px;
+      margin-top: 3px;
+      margin-right: 20px;
+    }
+
+    p {
+      font-size: 1.3rem;
+    }
+  }
+
+  ul li {
+    line-height: 2;
+  }
+
+  &__contact {
+    grid-area: contact;
+    justify-self: right;
+    svg {
+      margin-right: 2rem;
+    }
+  }
+
+  &__terms {
+    grid-area: terms;
+    justify-self: center;
+  }
+
+  &__conditions {
+    grid-area: conditions;
+    justify-self: center;
+  }
+
+  &__social {
+    grid-area: social;
+    display: flex;
+    li a {
+      padding-right: 1rem;
+
+      svg {
+        width: 35px;
+        height: 35px;
+        border: 1px solid #ffffff;
+        border-radius: 50%;
+        padding: 8px;
+        fill: #ffffff;
+        margin-right: 16px;
+        transition: all 150ms ease-in-out;
+
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.8);
+          fill: $footerBg;
+        }
+      }
+    }
+  }
+
+  .attribution {
+    font-size: 1.1rem;
+    text-align: center;
+    padding-bottom: 5rem;
+  }
+  .attribution a {
+    color: #3e52a3;
   }
 }
