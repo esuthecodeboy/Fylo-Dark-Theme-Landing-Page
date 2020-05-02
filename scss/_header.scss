@@ -4,17 +4,21 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  // 7.9rem left, 7.2rem top, 7.2rem bottom
   padding: 7.2rem 8rem;
+
+  @include breakpoint(medium) {
+    padding: 5.6rem 2.5rem;
+  }
+
   img {
-    width: 8.5rem;
+    width: 18.5rem;
 
     @include breakpoint(medium) {
-      // width
+      width: 13.5rem;
     }
 
-    @include breakpoint(large) {
-      width: 18.5rem;
+    @include breakpoint(small) {
+      width: 8.5rem;
     }
   }
 
@@ -22,6 +26,10 @@
     display: flex;
     li a {
       padding: 0 5rem;
+
+      @include breakpoint(small) {
+        padding: 0 1rem;
+      }
     }
   }
 }

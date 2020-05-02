@@ -20,19 +20,16 @@ $white: #ffffff;
 // Breakpoints
 $breakpoints: (
   // Phones
-    small: 499px,
+    small: 37.5rem,
   // Tablet
-    medium: 899px,
-  // Desktop
-    large: 999px,
-  // Large Desktop
-    xlarge: 1399px
+    medium: 76.8rem,
+
 );
 
 @mixin breakpoint($size) {
   $breakpoint-value: map-get($breakpoints, $size);
 
-  @media screen and (min-width: $breakpoint-value) {
+  @media screen and (max-width: $breakpoint-value) {
     @content;
   }
 }

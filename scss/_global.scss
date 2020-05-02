@@ -39,16 +39,16 @@ img {
   margin: 0 auto;
   padding: 7.3rem 6rem 8.7rem 6rem;
   overflow: hidden;
+
+  @include breakpoint(small) {
+    padding: 25px 20px 100px 20px;
+  }
 }
 
 h1,
 h2 {
   font-family: $font-title;
 }
-
-// section {
-//   padding: 7.3rem 6rem 8.7rem 6rem;
-// }
 
 .btn {
   display: inline-block;
@@ -57,6 +57,10 @@ h2 {
   border-radius: 5rem;
   cursor: pointer;
   transition: all 0.2s ease-in;
+
+  @include breakpoint(small) {
+    width: 100%;
+  }
 
   &:hover {
     transform: translateY(-0.5rem);
