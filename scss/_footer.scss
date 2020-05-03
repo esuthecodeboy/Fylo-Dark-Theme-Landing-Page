@@ -3,16 +3,25 @@
   .container {
     max-width: 124rem;
     padding-top: 20rem;
+
+    @include breakpoint(small) {
+      padding-top: 34.9rem;
+    }
   }
 
   &__grid {
     display: grid;
-    align-self: center;
-    padding-bottom: 9.4rem;
-    gap: 35px;
+    gap: 3.5rem;
     grid-template-columns: 3fr 2fr 2fr 2fr auto;
     grid-template-rows: 60px 1fr;
     grid-template-areas: "logo logo logo logo logo" "address contact terms conditions social";
+
+    @include breakpoint(small) {
+      grid-row-gap: 35px;
+      grid-column-gap: 0px;
+      grid-template-columns: 1fr;
+      grid-template-areas: "logo" "address" "contact" "terms" "conditions" "social";
+    }
   }
 
   &__logo {
@@ -27,20 +36,35 @@
       flex: 0 0 13px;
       margin-top: 3px;
       margin-right: 20px;
+      @include breakpoint(small) {
+        margin-top: 1rem;
+      }
     }
 
     p {
       font-size: 1.3rem;
+      @include breakpoint(small) {
+        font-size: 2rem;
+      }
     }
   }
 
   ul li {
-    line-height: 2;
+    line-height: 3;
+  }
+
+  &__contact,
+  &__terms,
+  &__conditions {
+    justify-self: right;
+    @include breakpoint(small) {
+      justify-self: start;
+    }
   }
 
   &__contact {
     grid-area: contact;
-    justify-self: right;
+
     svg {
       margin-right: 2rem;
     }
@@ -48,17 +72,20 @@
 
   &__terms {
     grid-area: terms;
-    justify-self: center;
   }
 
   &__conditions {
     grid-area: conditions;
-    justify-self: center;
   }
 
   &__social {
-    grid-area: social;
     display: flex;
+    grid-area: social;
+
+    @include breakpoint(small) {
+      justify-self: center;
+    }
+
     li a {
       padding-right: 1rem;
 
