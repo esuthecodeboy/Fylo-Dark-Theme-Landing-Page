@@ -67,7 +67,9 @@ h2 {
   }
 }
 
-button .btn {
+button {
+  color: $white;
+  border: none;
   &:focus {
     outline: none;
   }
