@@ -66,3 +66,9 @@ h2 {
     transform: translateY(-0.5rem);
   }
 }
+
+button .btn {
+  &:focus {
+    outline: none;
+  }
+}
